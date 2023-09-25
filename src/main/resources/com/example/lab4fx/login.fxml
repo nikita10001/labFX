@@ -6,14 +6,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab4fx.controller.LoginController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab4fx.controller.LoginController">
    <children>
-      <Button layoutX="245.0" layoutY="279.0" mnemonicParsing="false" text="Button">
-         <font>
-            <Font name="Segoe UI" size="20.0" />
-         </font>
-      </Button>
       <Label layoutX="138.0" layoutY="143.0" text="Пароль">
          <font>
             <Font name="Segoe UI" size="20.0" />
@@ -24,12 +18,13 @@
             <Font name="Segoe UI" size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="226.0" layoutY="143.0" />
-      <TextField layoutX="226.0" layoutY="197.0" />
+      <TextField fx:id="passwordLabel" layoutX="226.0" layoutY="143.0" />
+      <TextField fx:id="loginLabel" layoutX="226.0" layoutY="197.0" />
       <Label layoutX="214.0" layoutY="35.0" text="Авторизация">
          <font>
             <Font name="Segoe UI" size="25.0" />
          </font>
       </Label>
+      <Button layoutX="274.0" layoutY="285.0" mnemonicParsing="false" onAction="#loginBtnHandler" text="Button" />
    </children>
 </AnchorPane>
