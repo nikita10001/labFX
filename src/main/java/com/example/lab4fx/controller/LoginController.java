@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -18,28 +19,34 @@ public class LoginController {
 
 
     @FXML
-    TextField passwordLabel = new TextField();
+    private TextField passwordLabel = new TextField();
     @FXML
-    TextField loginLabel = new TextField();
+    private TextField loginLabel = new TextField();
+    @FXML //типо querySelector при работе с DOM
+    private Button loginButton;
 
-    public void loginBtnHandler(ActionEvent event){
-        String password = passwordLabel.getText();
-        String login = loginLabel.getText();
-        if(password.equals("admin") && login.equals("admin")){
-            switchToMain(event);
-        }else{
-            System.out.println("Неправильный пароль");
-        }
+
+    public void initialize(){
+        loginButton.setOnAction(event -> {
+            String password = passwordLabel.getText();
+            String login = loginLabel.getText();
+            if(password.equals("admin") && login.equals("admin")){
+                openProductListWindow();
+            }else{
+                System.out.println("Неправильный пароль");
+            }
+        });
     }
 
-    public void switchToMain(ActionEvent event) {
+    public void openProductListWindow() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/lab4fx/main.fxml"));
             Parent root = loader.load();
-            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
+//            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();  //////////
+            Stage stage = (Stage)(loginButton.getScene().getWindow());
+            stage.setScene(new Scene(root));
             stage.show();
+
         }catch (IOException e){
             e.printStackTrace();
         }
