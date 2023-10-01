@@ -73,13 +73,18 @@ public class MainController {
             productList.add(new Product(productName.getText(), productPrice.getText()));
         });
     }
-//    public void searchProductButtonHandler() {
-//        searchProductButton.setOnAction(e -> {
-//            productList =  productList.stream()
-//                    .filter(product -> product.getName().equals(queryProduct.getText()))
-//                    .collect();
-//        });
-//    }
+    public void searchProductButtonHandler() {
+        searchProductButton.setOnAction(e -> {
+            String query = queryProduct.getText().toLowerCase();
+            ObservableList<Product> filteredList = FXCollections.observableArrayList();
+            for (Product product : productList) {
+                if (product.getName().toLowerCase().contains(query)) {
+                    filteredList.add(product);
+                }
+            }
+            productTableView.setItems(filteredList);
+        });
+    }
     private void setupTableColumns() {
         TableColumn<Product, String> nameColumn =
                 (TableColumn<Product, String>) productTableView.getColumns().get(0);
@@ -98,6 +103,5 @@ public class MainController {
         productTableView.setEditable(true);
         productTableView.setItems(productList);
     }
-
 
 }
