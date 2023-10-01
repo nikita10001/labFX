@@ -5,12 +5,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab4fx.controller.MainController">
+<AnchorPane prefHeight="544.0" prefWidth="718.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab4fx.controller.MainController">
    <children>
-      <Button fx:id="logoutButton" layoutX="442.0" layoutY="28.0" mnemonicParsing="false" style="-fx-background-color: #15a42f; -fx-background-radius: 10;" text="Выйти" textFill="WHITE">
+      <Button fx:id="logoutButton" layoutX="603.0" layoutY="24.0" mnemonicParsing="false" style="-fx-background-color: #15a42f; -fx-background-radius: 10;" text="Выйти" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="20.0" />
          </font>
@@ -18,16 +20,23 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label layoutX="63.0" layoutY="28.0" text="Главная страница">
+      <Label layoutX="261.0" layoutY="14.0" text="Главная страница">
          <font>
             <Font name="Segoe UI" size="24.0" />
          </font>
       </Label>
-      <TableView fx:id="productTableView" layoutX="19.0" layoutY="77.0" prefHeight="290.0" prefWidth="566.0" style="-fx-border-color: black;">
+      <TableView fx:id="productTableView" layoutX="36.0" layoutY="225.0" prefHeight="290.0" prefWidth="645.0" style="-fx-border-color: black;">
         <columns>
-          <TableColumn prefWidth="276.0"  text="Название товара" />
-          <TableColumn prefWidth="289.60003662109375"  text="Цена товара" />
+          <TableColumn prefWidth="318.39997482299805" text="Название товара" />
+          <TableColumn prefWidth="324.800048828125" text="Цена товара" />
         </columns>
       </TableView>
+      <Button fx:id="addProductButton" layoutX="241.0" layoutY="89.0" mnemonicParsing="false" text="Добавить" />
+      <TextField fx:id="productName" layoutX="37.0" layoutY="76.0" prefHeight="26.0" prefWidth="172.0" />
+      <TextField fx:id="productPrice" layoutX="37.0" layoutY="134.0" prefHeight="26.0" prefWidth="172.0" />
+      <TextField fx:id="queryProduct" layoutX="36.0" layoutY="186.0" prefHeight="26.0" prefWidth="274.0" />
+      <Button fx:id="searchProductButton" layoutX="333.0" layoutY="186.0" mnemonicParsing="false" text="Поиск" />
+      <Text layoutX="23.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите название товара" wrappingWidth="149.60000000000008" />
+      <Text layoutX="23.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите цену товара:" wrappingWidth="149.60000000000008" />
    </children>
 </AnchorPane>

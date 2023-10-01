@@ -2,13 +2,13 @@ package com.example.lab4fx;
 
 public class Product {
     private String name;
-    private double price;
+    private String price;
 
-    public Product(String name, double price) {
+    public Product(String name, String price) {
         this.name = name;
         this.price = price;
     }
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
     public String getName() {
@@ -17,7 +17,7 @@ public class Product {
     public void setName(String name) {
         this.name = name;
     }
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 }

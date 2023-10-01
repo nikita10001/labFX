@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91adf853-275c-489f-a089-ab673f68611d" name="Changes" comment="+registerWindow">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/WindowSwitcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/UserList.java" afterDir="false" />
+    <list default="true" id="91adf853-275c-489f-a089-ab673f68611d" name="Changes" comment="ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/RegistrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/RegistrController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +97,7 @@
       <workItem from="1695817766230" duration="456000" />
       <workItem from="1695886404653" duration="61000" />
       <workItem from="1695996689965" duration="12000" />
-      <workItem from="1696172087389" duration="10610000" />
+      <workItem from="1696172087389" duration="12757000" />
     </task>
     <task id="LOCAL-00001" summary="init lab project">
       <option name="closed" value="true" />
@@ -145,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696173471397</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="ok">
+      <option name="closed" value="true" />
+      <created>1696184645458</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696184645458</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,8 +168,8 @@
     <MESSAGE value="init lab project" />
     <MESSAGE value="login page + main page + switcher between scenes" />
     <MESSAGE value="before trying to use chat" />
-    <MESSAGE value="ok" />
     <MESSAGE value="+registerWindow" />
-    <option name="LAST_COMMIT_MESSAGE" value="+registerWindow" />
+    <MESSAGE value="ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>
 </project>

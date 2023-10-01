@@ -12,10 +12,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.stream.Collectors;
 
 public class MainController {
     private Stage stage;
@@ -23,7 +26,17 @@ public class MainController {
     private Parent root;
 
     @FXML
+    private TextField productName;
+    @FXML
+    private TextField productPrice;
+    @FXML
+    private TextField queryProduct;
+    @FXML
+    private Button searchProductButton;
+    @FXML
     private Button logoutButton;
+    @FXML
+    private Button addProductButton;
     @FXML
     private TableView<Product> productTableView;
     private ObservableList<Product> productList;
@@ -35,6 +48,8 @@ public class MainController {
         loadProductList();
         setupTableColumns();
         logoutBtnHandler();
+        addGoodButtonHandler();
+        searchProductButtonHandler();
     }
 
     private void logoutBtnHandler() {
@@ -53,7 +68,18 @@ public class MainController {
         });
 
     }
-
+    public void addGoodButtonHandler() {
+        addProductButton.setOnAction(e -> {
+            productList.add(new Product(productName.getText(), productPrice.getText()));
+        });
+    }
+//    public void searchProductButtonHandler() {
+//        searchProductButton.setOnAction(e -> {
+//            productList =  productList.stream()
+//                    .filter(product -> product.getName().equals(queryProduct.getText()))
+//                    .collect();
+//        });
+//    }
     private void setupTableColumns() {
         TableColumn<Product, String> nameColumn =
                 (TableColumn<Product, String>) productTableView.getColumns().get(0);
@@ -65,9 +91,9 @@ public class MainController {
 
     private void loadProductList() {
         productList = FXCollections.observableArrayList(
-                new Product("Семена цветов", 10.0),
-                new Product("Удобрение для растений", 15.0),
-                new Product("Садовые инструменты", 25.0)
+                new Product("Семена цветов", "10.0"),
+                new Product("Удобрение для растений", "15.0"),
+                new Product("Садовые инструменты", "25.0")
         );
         productTableView.setEditable(true);
         productTableView.setItems(productList);
