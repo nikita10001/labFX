@@ -13,7 +13,7 @@ public class UserList implements Serializable {
 //            new User("Nikita", "nikita", "nikita"),
 //            new User("Admin", "admin", "admin"),
 //            new User("User", "user", "user")
-    List<User> users;
+    private List<User> users;
     {
         users = FileService.readFromFile(users, "users.txt");
     }
@@ -29,7 +29,6 @@ public class UserList implements Serializable {
 //        showUsersList();
     }
     public void getUsersFromFile() {
-
         FileService.readFromFile(users, "users.txt");
     }
     public Boolean isExistUser(String login, String password) {

@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91adf853-275c-489f-a089-ab673f68611d" name="Changes" comment="j">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/FileService.java" afterDir="false" />
+    <list default="true" id="91adf853-275c-489f-a089-ab673f68611d" name="Changes" comment="implement products serialization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/RegistrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/RegistrController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/ProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/ProductList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/UserList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/register.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/users.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +86,15 @@
       <recent name="com.example.lab4fx" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.lab4fx.Application" />
+      <module name="lab4FX" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,7 +118,7 @@
       <workItem from="1696225860845" duration="1673000" />
       <workItem from="1696229981238" duration="376000" />
       <workItem from="1696231734622" duration="905000" />
-      <workItem from="1696266307732" duration="1436000" />
+      <workItem from="1696266307732" duration="4749000" />
     </task>
     <task id="LOCAL-00001" summary="init lab project">
       <option name="closed" value="true" />
@@ -169,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696220292369</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="implement products serialization">
+      <option name="closed" value="true" />
+      <created>1696268170701</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696268170701</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +209,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="mvc" />
                       </list>
                     </value>
                   </entry>
@@ -206,7 +229,8 @@
     <MESSAGE value="ok" />
     <MESSAGE value="search doesn't work" />
     <MESSAGE value="j" />
-    <option name="LAST_COMMIT_MESSAGE" value="j" />
+    <MESSAGE value="implement products serialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement products serialization" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

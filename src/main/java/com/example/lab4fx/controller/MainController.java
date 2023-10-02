@@ -1,6 +1,7 @@
 package com.example.lab4fx.controller;
 
 import com.example.lab4fx.model.Product;
+import com.example.lab4fx.model.ProductList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -34,7 +35,8 @@ public class MainController {
     private Button addProductButton;
     @FXML
     private TableView<Product> productTableView;
-    private ObservableList<Product> productList;
+
+    ProductList productList = new ProductList();
 
 
     @FXML
@@ -63,14 +65,14 @@ public class MainController {
     }
     public void addGoodButtonHandler() {
         addProductButton.setOnAction(e -> {
-            productList.add(new Product(productName.getText(), productPrice.getText()));
+            productList.addProduct(productName.getText(), productPrice.getText());
         });
     }
     public void searchProductButtonHandler() {
         searchProductButton.setOnAction(e -> {
             String query = queryProduct.getText().toLowerCase();
             ObservableList<Product> filteredList = FXCollections.observableArrayList();
-            for (Product product : productList) {
+            for (Product product : productList.getProductList()) {
                 if (product.getName().toLowerCase().contains(query)) {
                     filteredList.add(product);
                 }
@@ -88,13 +90,8 @@ public class MainController {
     }
 
     private void loadProductList() {
-        productList = FXCollections.observableArrayList(
-                new Product("Семена цветов", "10.0"),
-                new Product("Удобрение для растений", "15.0"),
-                new Product("Садовые инструменты", "25.0")
-        );
         productTableView.setEditable(true);
-        productTableView.setItems(productList);
+        productTableView.setItems(productList.getProductList());
     }
 
 }
