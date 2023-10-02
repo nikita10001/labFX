@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91adf853-275c-489f-a089-ab673f68611d" name="Changes" comment="ok">
+    <list default="true" id="91adf853-275c-489f-a089-ab673f68611d" name="Changes" comment="search doesn't work">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/main.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +95,7 @@
       <workItem from="1695817766230" duration="456000" />
       <workItem from="1695886404653" duration="61000" />
       <workItem from="1695996689965" duration="12000" />
-      <workItem from="1696172087389" duration="12757000" />
+      <workItem from="1696172087389" duration="13501000" />
     </task>
     <task id="LOCAL-00001" summary="init lab project">
       <option name="closed" value="true" />
@@ -147,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696184645458</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="search doesn't work">
+      <option name="closed" value="true" />
+      <created>1696186734929</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696186734929</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +164,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="chat" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -170,6 +188,7 @@
     <MESSAGE value="before trying to use chat" />
     <MESSAGE value="+registerWindow" />
     <MESSAGE value="ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="ok" />
+    <MESSAGE value="search doesn't work" />
+    <option name="LAST_COMMIT_MESSAGE" value="search doesn't work" />
   </component>
 </project>
