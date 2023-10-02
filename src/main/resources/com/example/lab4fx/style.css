@@ -1,4 +1,3 @@
-.button{
-    -fx-border-radius: 15;
-    -fx-border-width: 2;
+#loginButton {
+    -fx-fill: red;
 }

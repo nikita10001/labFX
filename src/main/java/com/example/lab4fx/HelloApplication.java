@@ -17,12 +17,15 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        System.out.println(getClass().getResource("login.fxml"));
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
         Parent root = loader.load();
-        String css = this.getClass().getResource("style.css").toExternalForm();
+
         Scene scene = new Scene(root);
+
+        String css = this.getClass().getResource("style.css").toExternalForm();
         scene.getStylesheets().add(css);
+
         stage.setTitle("Store");
         stage.setScene(scene);
         stage.show();
