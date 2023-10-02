@@ -7,4 +7,6 @@ module com.example.lab4fx {
     exports com.example.lab4fx;
     exports com.example.lab4fx.controller;
     opens com.example.lab4fx.controller to javafx.fxml;
+    exports com.example.lab4fx.model;
+    opens com.example.lab4fx.model to javafx.fxml;
 }

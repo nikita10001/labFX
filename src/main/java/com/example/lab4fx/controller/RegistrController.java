@@ -41,8 +41,6 @@ public class RegistrController {
             String password = regPasswordTF.getText();
             String login = regLoginTF.getText();
 
-
-
             if(userList.isExistUser(password, login)) {
                 regError.setVisible(true);
             }

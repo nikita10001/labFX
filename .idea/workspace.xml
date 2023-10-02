@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91adf853-275c-489f-a089-ab673f68611d" name="Changes" comment="search doesn't work">
+    <list default="true" id="91adf853-275c-489f-a089-ab673f68611d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/RegistrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/RegistrController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/UserList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +38,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "nikita10001"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nikita10001&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -61,7 +68,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "chat",
+    "git-widget-placeholder": "mvc",
     "last_opened_file_path": "C:/Users/Nikita/Desktop",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -96,6 +103,7 @@
       <workItem from="1695886404653" duration="61000" />
       <workItem from="1695996689965" duration="12000" />
       <workItem from="1696172087389" duration="13501000" />
+      <workItem from="1696218611430" duration="1117000" />
     </task>
     <task id="LOCAL-00001" summary="init lab project">
       <option name="closed" value="true" />
@@ -170,7 +178,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="chat" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>

@@ -1,4 +1,4 @@
-package com.example.lab4fx;
+package com.example.lab4fx.model;
 
 public class Product {
     private String name;

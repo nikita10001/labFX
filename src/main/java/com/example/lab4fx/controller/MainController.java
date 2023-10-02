@@ -1,9 +1,8 @@
 package com.example.lab4fx.controller;
 
-import com.example.lab4fx.Product;
+import com.example.lab4fx.model.Product;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -14,16 +13,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.stream.Collectors;
 
 public class MainController {
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
+
 
     @FXML
     private TextField productName;
@@ -56,17 +51,15 @@ public class MainController {
         logoutButton.setOnAction(e -> {
             try {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/lab4fx/login.fxml"));
-                root = loader.load();
-                stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-                scene = new Scene(root);
+                Parent root = loader.load();
+                Stage stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
+                Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
-            }
-            catch (IOException ex) {
+            }catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
         });
-
     }
     public void addGoodButtonHandler() {
         addProductButton.setOnAction(e -> {

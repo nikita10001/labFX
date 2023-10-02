@@ -29,16 +29,15 @@ public class LoginController {
     public void toRegisterBtnHandler() {
         toRegisterBtn.setOnAction(event -> {
             WindowSwitcher.switchWindow(event,
-                        getClass().getResource(WindowSwitcher.getUrl("register")));
+                getClass().getResource(WindowSwitcher.getUrl("register")));
         });
     }
 
     public void loginButtonHandler() {
         loginButton.setOnAction(event -> {
-
             if(userList.isExistUser(loginTF.getText(), passwordTF.getText())){
                 WindowSwitcher.switchWindow(event,
-                        getClass().getResource(WindowSwitcher.getUrl("main")));
+                    getClass().getResource(WindowSwitcher.getUrl("main")));
             }else{
                 errorLabel.setVisible(true);
             }
