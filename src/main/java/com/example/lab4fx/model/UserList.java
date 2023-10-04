@@ -6,20 +6,18 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+//private List<User> users = new ArrayList<>(Arrays.asList( //на случай удаления файла
+//        new User("Nikita", "nikita", "nikita"),
+//        new User("Admin", "admin", "admin"),
+//        new User("User", "user", "user")
+//        ));
 public class UserList implements Serializable {
-    //
-//    List<User> users = new ArrayList<>(Arrays.asList( //на случай удаления файла
-//            new User("Nikita", "nikita", "nikita"),
-//            new User("Admin", "admin", "admin"),
-//            new User("User", "user", "user")
     private List<User> users;
     {
         users = FileService.readFromFile(users, "users.txt");
     }
     public UserList(List<User> users) {
         this.users = users;
-
     }
     public UserList(){}
 

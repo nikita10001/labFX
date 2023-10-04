@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/19.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab4fx.controller.RegistrController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab4fx.controller.RegistrController">
     <children>
         <Label layoutX="84.0" layoutY="246.0" text="Придумайте пароль:" textFill="#111111">
             <font>
@@ -43,6 +43,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </Text>
+      <Button fx:id="returnLogin" layoutX="442.0" layoutY="322.0" mnemonicParsing="false" text="Назад" />
         
     </children>
 </AnchorPane>

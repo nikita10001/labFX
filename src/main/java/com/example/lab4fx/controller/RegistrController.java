@@ -26,14 +26,18 @@ public class RegistrController {
 
     @FXML //типо querySelector при работе с DOM
     private Button registerButton;
+    @FXML
+    private Button returnLogin;
 
     @FXML
     private Text regError;
+
 
     UserList userList = new UserList();
 
     public void initialize() {
         registerButtonHandler();
+        returnLoginHandler();
     }
 
     public void registerButtonHandler() {
@@ -53,6 +57,13 @@ public class RegistrController {
                 WindowSwitcher.switchWindow(event,
                         getClass().getResource(WindowSwitcher.getUrl("main")));
             }
+        });
+    }
+
+    public void returnLoginHandler() {
+        returnLogin.setOnAction(event -> {
+            WindowSwitcher.switchWindow(event,
+                    getClass().getResource(WindowSwitcher.getUrl("login")));
         });
     }
 
