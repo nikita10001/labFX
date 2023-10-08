@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91adf853-275c-489f-a089-ab673f68611d" name="Changes" comment="how to serialize observable">
+    <list default="true" id="91adf853-275c-489f-a089-ab673f68611d" name="Changes" comment="before add view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/RegistrController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/RegistrController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/ProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/ProductList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/UserList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/lab4fx/register.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.txt" beforeDir="false" afterPath="$PROJECT_DIR$/products.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/users.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +62,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;serialize-products&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;test-product-view&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Nikita/Desktop&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -118,6 +114,7 @@
       <workItem from="1696266307732" duration="5107000" />
       <workItem from="1696399918087" duration="3840000" />
       <workItem from="1696406231658" duration="39000" />
+      <workItem from="1696410853372" duration="60000" />
     </task>
     <task id="LOCAL-00001" summary="init lab project">
       <option name="closed" value="true" />
