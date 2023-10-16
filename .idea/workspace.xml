@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91adf853-275c-489f-a089-ab673f68611d" name="Changes" comment="search doesn't work">
+    <list default="true" id="91adf853-275c-489f-a089-ab673f68611d" name="Changes" comment="how to serialize observable">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.txt" beforeDir="false" afterPath="$PROJECT_DIR$/products.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/ProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lab4fx/model/ProductList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/users.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,17 +30,17 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="mvc" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "nikita10001"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nikita10001&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -54,28 +58,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "chat",
-    "last_opened_file_path": "C:/Users/Nikita/Desktop",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;serialize-products&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Nikita/Desktop&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.lab4fx" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.lab4fx.Application" />
+      <module name="lab4FX" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -96,6 +110,15 @@
       <workItem from="1695886404653" duration="61000" />
       <workItem from="1695996689965" duration="12000" />
       <workItem from="1696172087389" duration="13501000" />
+      <workItem from="1696218611430" duration="1707000" />
+      <workItem from="1696225860845" duration="1673000" />
+      <workItem from="1696229981238" duration="376000" />
+      <workItem from="1696231734622" duration="905000" />
+      <workItem from="1696266307732" duration="5107000" />
+      <workItem from="1696399918087" duration="3840000" />
+      <workItem from="1696406231658" duration="39000" />
+      <workItem from="1697477559978" duration="10000" />
+      <workItem from="1697477577294" duration="476000" />
     </task>
     <task id="LOCAL-00001" summary="init lab project">
       <option name="closed" value="true" />
@@ -153,7 +176,39 @@
       <option name="project" value="LOCAL" />
       <updated>1696186734929</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="j">
+      <option name="closed" value="true" />
+      <created>1696220292369</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696220292369</updated>
+    </task>
+    <task id="LOCAL-00009" summary="implement products serialization">
+      <option name="closed" value="true" />
+      <created>1696268170701</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696268170701</updated>
+    </task>
+    <task id="LOCAL-00010" summary="how to serialize observable">
+      <option name="closed" value="true" />
+      <created>1696271284748</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696271284748</updated>
+    </task>
+    <task id="LOCAL-00011" summary="how to serialize observable">
+      <option name="closed" value="true" />
+      <created>1696271292263</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696271292263</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +225,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="chat" />
+                        <option value="serialize-products" />
                       </list>
                     </value>
                   </entry>
@@ -189,6 +244,13 @@
     <MESSAGE value="+registerWindow" />
     <MESSAGE value="ok" />
     <MESSAGE value="search doesn't work" />
-    <option name="LAST_COMMIT_MESSAGE" value="search doesn't work" />
+    <MESSAGE value="j" />
+    <MESSAGE value="implement products serialization" />
+    <MESSAGE value="how to serialize observable" />
+    <option name="LAST_COMMIT_MESSAGE" value="how to serialize observable" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

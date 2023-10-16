@@ -1,15 +1,13 @@
 package com.example.lab4fx;
 
-import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class Application extends javafx.application.Application {
     public static void main(String[] args) {
         launch();
     }

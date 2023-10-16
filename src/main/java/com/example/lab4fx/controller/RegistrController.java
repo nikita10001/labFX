@@ -3,6 +3,7 @@ package com.example.lab4fx.controller;
 import com.example.lab4fx.model.UserList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -25,14 +26,18 @@ public class RegistrController {
 
     @FXML //типо querySelector при работе с DOM
     private Button registerButton;
+    @FXML
+    private Button returnLogin;
 
     @FXML
     private Text regError;
+
 
     UserList userList = new UserList();
 
     public void initialize() {
         registerButtonHandler();
+        returnLoginHandler();
     }
 
     public void registerButtonHandler() {
@@ -40,8 +45,6 @@ public class RegistrController {
             String name = regNameTF.getText();
             String password = regPasswordTF.getText();
             String login = regLoginTF.getText();
-
-
 
             if(userList.isExistUser(password, login)) {
                 regError.setVisible(true);
@@ -54,6 +57,13 @@ public class RegistrController {
                 WindowSwitcher.switchWindow(event,
                         getClass().getResource(WindowSwitcher.getUrl("main")));
             }
+        });
+    }
+
+    public void returnLoginHandler() {
+        returnLogin.setOnAction(event -> {
+            WindowSwitcher.switchWindow(event,
+                    getClass().getResource(WindowSwitcher.getUrl("login")));
         });
     }
 

@@ -1,6 +1,8 @@
-package com.example.lab4fx;
+package com.example.lab4fx.model;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     private String name;
     private String price;
 

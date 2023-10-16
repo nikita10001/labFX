@@ -1,6 +1,8 @@
 package com.example.lab4fx.model;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String name;
     private String login;
     private String password;
