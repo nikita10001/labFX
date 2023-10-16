@@ -20,7 +20,6 @@ import java.io.IOException;
 
 public class MainController {
 
-
     @FXML
     private TextField productName;
     @FXML
@@ -47,25 +46,34 @@ public class MainController {
         logoutBtnHandler();
         addGoodButtonHandler();
         searchProductButtonHandler();
+        ///++==========================================================
+        //КНОПКА ВЫЙТИ НЕ РАБОТАЕТ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        ///++==========================================================
+        
+        productTableView.setOnMouseClicked(event -> {
+            if (event.getClickCount() == 1) { // Проверка на одиночный клик
+                Product selectedItem = productTableView.getSelectionModel().getSelectedItem(); // Получение выбранного элемента
+                productTableView.getItems().remove(selectedItem); // Удаление выбранного элемента из таблицы
+            }
+        });
     }
 
     private void logoutBtnHandler() {
         logoutButton.setOnAction(e -> {
-            try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/lab4fx/login.fxml"));
-                Parent root = loader.load();
-                Stage stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
-                Scene scene = new Scene(root);
-                stage.setScene(scene);
-                stage.show();
-            }catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
+            WindowSwitcher.switchWindow(e,
+                    getClass().getResource(WindowSwitcher.getUrl("login")));
         });
     }
+
     public void addGoodButtonHandler() {
         addProductButton.setOnAction(e -> {
-            productList.addProduct(productName.getText(), productPrice.getText());
+            if(!productName.getText().isEmpty() && !productPrice.getText().isEmpty()){
+                productList.addProduct(productName.getText(), productPrice.getText());
+                productName.setText("");
+                productPrice.setText("");
+            }
+            productTableView.setItems(productList.getProductList());
+
         });
     }
     public void searchProductButtonHandler() {
@@ -84,14 +92,13 @@ public class MainController {
         TableColumn<Product, String> nameColumn =
                 (TableColumn<Product, String>) productTableView.getColumns().get(0);
         nameColumn.setCellValueFactory(new PropertyValueFactory<Product, String>("name"));
+
         TableColumn<Product, Double> priceColumn =
                 (TableColumn<Product, Double>) productTableView.getColumns().get(1);
         priceColumn.setCellValueFactory(new PropertyValueFactory<Product, Double>("price"));
     }
-
     private void loadProductList() {
         productTableView.setEditable(true);
         productTableView.setItems(productList.getProductList());
     }
-
 }

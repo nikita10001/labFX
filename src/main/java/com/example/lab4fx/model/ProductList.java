@@ -26,6 +26,10 @@ public class ProductList implements Serializable {
         FileService.writeInFile(products, "products.txt");
     }
 
+    public List<Product> getProducts() {
+        return products;
+    }
+
     public void setProductList(ObservableList<Product> products) {
         this.products = products;
     }
