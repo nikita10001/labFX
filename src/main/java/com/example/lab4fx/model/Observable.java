@@ -4,5 +4,5 @@ package com.example.lab4fx.model;
 public interface Observable {
     void registerObserver(Observer o);
 
-    void notifyObservers(String message);
+    void notifyObservers(Notification notification);
 }

@@ -1,15 +1,14 @@
 package com.example.lab4fx.controller;
 
+import com.example.lab4fx.model.Notification;
 import com.example.lab4fx.model.Observer;
 import com.example.lab4fx.model.Product;
 import com.example.lab4fx.model.ProductList;
+import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class MainController implements Observer {
@@ -21,6 +20,10 @@ public class MainController implements Observer {
     @FXML
     private TextField queryProduct;
     @FXML
+    private Label notifyLabel;
+    @FXML
+    private Label numError;
+    @FXML
     private Button searchProductButton;
     @FXML
     private Button logoutButton;
@@ -31,14 +34,18 @@ public class MainController implements Observer {
 
     ProductList productList = new ProductList();
 
+
+    //передавать товары
     @Override
-    public void notification(String message) {
-        if(message.equals("Product added")) {
-            productTableView.setItems(productList.getProductList());
+    public void notification(Notification notification) {
+        if(notification == Notification.ADDED){
+            notifyLabel.setText("Товар добавлен!");
+            numError.setVisible(false);
+        }else if(notification == Notification.DELETED){
+            notifyLabel.setText("Товар удалён!");
         }
-        if(message.equals("Product deleted")) {
-            productTableView.setItems(productList.getProductList());
-        }
+        productTableView.setItems(productList.getProductList());
+        notifyLabel.setVisible(true);
     }
 
     @FXML
@@ -51,7 +58,6 @@ public class MainController implements Observer {
         addGoodButtonHandler();
         searchProductButtonHandler();
         deleteProductHanlder();
-
         //регистрация слушателя
         productList.registerObserver(this);
     }
@@ -73,10 +79,20 @@ public class MainController implements Observer {
     public void addGoodButtonHandler() {
         addProductButton.setOnAction(e -> {
             if(!productName.getText().isEmpty() && !productPrice.getText().isEmpty()) {
-                productList.addProduct(productName.getText(), productPrice.getText());
-                productName.setText("");
-                productPrice.setText("");
+                try{
+                    double price = Double.parseDouble(productPrice.getText());
+                    productList.addProduct(productName.getText(), price);
+
+                    productName.setText("");
+                    productPrice.setText("");
+                }
+                catch (Exception exception){
+                    numError.setVisible(true);
+                    numError.setText("Цена не может быть строкой");
+                    productPrice.setText("");
+                }
             }
+
         });
     }
     public void searchProductButtonHandler() {

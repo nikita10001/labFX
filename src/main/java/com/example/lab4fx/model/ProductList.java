@@ -15,10 +15,10 @@ import java.util.stream.Collectors;
 
 public class ProductList implements Serializable, Observable {
     private List<Product> products;
+
     private List<Observer> observers;
     public ProductList(){
         products = FileService.readFromFile(products, "products.txt");
-
         observers = new LinkedList<>();
     }
 
@@ -28,27 +28,27 @@ public class ProductList implements Serializable, Observable {
     }
 
     @Override
-    public void notifyObservers(String message) {
+    public void notifyObservers(Notification notification) {
         for(Observer observer : observers) {
-            observer.notification(message);
+            observer.notification(notification);
         }
     }
 
-    public void addProduct(String name, String price) {
+    public void addProduct(String name, Double price) {
         products.add(new Product(name, price));
         FileService.writeInFile(products, "products.txt");
-        notifyObservers("Product added");
+        notifyObservers(Notification.ADDED);
     }
     //implement remove by id ??
-    public void removeProduct(String name, String price) {
+    public void removeProduct(String name, Double price) {
         products = products.stream()
                 .filter(product ->
-                        !product.getPrice().equals(price)
+                        !Objects.equals(product.getPrice(), price)
                         && !product.getName().equals(name))
                 .collect(Collectors.toList());
         FileService.writeInFile(products, "products.txt");
 
-        notifyObservers("Product deleted");
+        notifyObservers(Notification.DELETED);
     }
 
     public List<Product> getProducts() {
