@@ -1,24 +1,18 @@
 package com.example.lab4fx.controller;
 
+import com.example.lab4fx.model.Observer;
 import com.example.lab4fx.model.Product;
 import com.example.lab4fx.model.ProductList;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 
-import java.io.IOException;
-
-public class MainController {
+public class MainController implements Observer {
 
     @FXML
     private TextField productName;
@@ -37,43 +31,52 @@ public class MainController {
 
     ProductList productList = new ProductList();
 
+    @Override
+    public void notification(String message) {
+        if(message.equals("Product added")) {
+            productTableView.setItems(productList.getProductList());
+        }
+        if(message.equals("Product deleted")) {
+            productTableView.setItems(productList.getProductList());
+        }
+    }
 
     @FXML
     private void initialize() {
         // Загрузка списка товаров и отображение данных в элементах интерфейса
         loadProductList();
         setupTableColumns();
+        //обработчики событий
         logoutBtnHandler();
         addGoodButtonHandler();
         searchProductButtonHandler();
-        ///++==========================================================
-        //КНОПКА ВЫЙТИ НЕ РАБОТАЕТ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        ///++==========================================================
-        
+        deleteProductHanlder();
+
+        //регистрация слушателя
+        productList.registerObserver(this);
+    }
+
+    private void deleteProductHanlder() {
         productTableView.setOnMouseClicked(event -> {
-            if (event.getClickCount() == 1) { // Проверка на одиночный клик
+            if (event.getClickCount() == 2) { // Проверка на двойной клик
                 Product selectedItem = productTableView.getSelectionModel().getSelectedItem(); // Получение выбранного элемента
-                productTableView.getItems().remove(selectedItem); // Удаление выбранного элемента из таблицы
+                productList.removeProduct(selectedItem.getName(), selectedItem.getPrice());
             }
         });
     }
-
     private void logoutBtnHandler() {
         logoutButton.setOnAction(e -> {
             WindowSwitcher.switchWindow(e,
                     getClass().getResource(WindowSwitcher.getUrl("login")));
         });
     }
-
     public void addGoodButtonHandler() {
         addProductButton.setOnAction(e -> {
-            if(!productName.getText().isEmpty() && !productPrice.getText().isEmpty()){
+            if(!productName.getText().isEmpty() && !productPrice.getText().isEmpty()) {
                 productList.addProduct(productName.getText(), productPrice.getText());
                 productName.setText("");
                 productPrice.setText("");
             }
-            productTableView.setItems(productList.getProductList());
-
         });
     }
     public void searchProductButtonHandler() {
