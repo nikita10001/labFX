@@ -1,10 +1,12 @@
 package com.example.lab4fx.controller;
 
+import com.example.lab4fx.controller.command.AddProductCommand;
+import com.example.lab4fx.controller.command.Command;
+import com.example.lab4fx.controller.command.DeleteProductCommand;
 import com.example.lab4fx.model.Notification;
 import com.example.lab4fx.model.Observer;
 import com.example.lab4fx.model.Product;
 import com.example.lab4fx.model.ProductList;
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -34,7 +36,17 @@ public class MainController implements Observer {
 
     ProductList productList = new ProductList();
 
+    private Command command;
 
+    public void setCommand(Command command) {
+        this.command = command;
+    }
+
+    private void executeCommand() {
+        if (command != null) {
+            command.execute();
+        }
+    }
     //передавать товары
     @Override
     public void notification(Notification notification) {
@@ -67,6 +79,8 @@ public class MainController implements Observer {
             if (event.getClickCount() == 2) { // Проверка на двойной клик
                 Product selectedItem = productTableView.getSelectionModel().getSelectedItem(); // Получение выбранного элемента
                 productList.removeProduct(selectedItem.getName(), selectedItem.getPrice());
+                command = new DeleteProductCommand(productList, selectedItem.getName(), selectedItem.getPrice());
+                executeCommand();
             }
         });
     }
@@ -81,8 +95,8 @@ public class MainController implements Observer {
             if(!productName.getText().isEmpty() && !productPrice.getText().isEmpty()) {
                 try{
                     double price = Double.parseDouble(productPrice.getText());
-                    productList.addProduct(productName.getText(), price);
-
+                    command = new AddProductCommand(productList, productName.getText(), price);
+                    executeCommand();
                     productName.setText("");
                     productPrice.setText("");
                 }
